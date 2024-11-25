@@ -16,6 +16,10 @@ void Robot::set_angulare_speed(double vitesse_angulaire)
 
 }
 
+double Robot::get_angulare_speed()
+{
+
+}
 
 void Robot::stop()
 {
