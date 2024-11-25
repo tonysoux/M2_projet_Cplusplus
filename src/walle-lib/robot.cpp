@@ -11,12 +11,12 @@ void Robot::set_speed(double speed)
     m_speed = speed;
 }
 
-void Robot::set_angulare_speed(double vitesse_angulaire)
+void Robot::set_angular_speed(double vitesse_angulaire)
 {
 
 }
 
-double Robot::get_angulare_speed()
+double Robot::get_angular_speed()
 {
 
 }
@@ -24,7 +24,7 @@ double Robot::get_angulare_speed()
 void Robot::stop()
 {
     set_speed(0);
-    set_angulare_speed(0);
+    set_angular_speed(0);
 }
 
 void Robot::run(double dt)
