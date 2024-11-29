@@ -5,13 +5,16 @@
 #ifndef IRRIGATIONROBOT_HPP
 #define IRRIGATIONROBOT_HPP
 
-
+#include "Robot.hpp"
 
 class IrrigationRobot : public Robot {
-private:
+protected:
     double m_water_level{0.5};
+    void irrigate(double x, double y);
+    // position de la zone de recharge en eau
+    std::vector<Vector2> m_water_zones;
 public:
-    irrigationRobot(Environment* env) : Robot(env) {};
+    IrrigationRobot(Environment* env) : Robot(env) {};
 };
 
 

@@ -5,6 +5,8 @@
 #ifndef PLANTINGROBOT_H
 #define PLANTINGROBOT_H
 
+#include "Robot.hpp"
+
 
 class PlantingRobot : public Robot
 {
@@ -15,6 +17,14 @@ public:
     double get_battery_capacity();
 public:
     void set_seed();
+    void set_seed_capacity(double seed_capacity);
+    double get_seed_capacity();
+
+protected:
+    double m_seed_capacity{0.5};
+    // position de la zone de recharge de graines
+    std::vector<Vector2> m_seed_zones;
+
 };
 
 

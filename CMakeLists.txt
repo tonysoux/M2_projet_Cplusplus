@@ -20,7 +20,9 @@ add_library(walle-lib SHARED
         src/walle-lib/Plantation.cpp
         src/walle-lib/Plantation.hpp
         src/walle-lib/Obstacle.cpp
-        src/walle-lib/Obstacle.hpp)
+        src/walle-lib/Obstacle.hpp
+        src/walle-lib/Digging_Robot.cpp
+        src/walle-lib/Digging_Robot.hpp)
 
 target_include_directories(walle-lib
   PUBLIC
