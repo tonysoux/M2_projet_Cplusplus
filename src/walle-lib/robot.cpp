@@ -34,7 +34,4 @@ void Robot::run(double dt)
     m_theta += m_omega * dt ;
 }
 
-void PlantingRobot::set_seed()
-{
-    environment->add_seed_at(get_position_x(), get_position_y(), "Oak");
-}
+
