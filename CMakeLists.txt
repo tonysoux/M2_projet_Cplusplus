@@ -40,4 +40,3 @@ target_link_libraries(
   walle-lib
   GTest::gtest_main
 )
-
