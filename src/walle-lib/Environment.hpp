@@ -1,5 +1,6 @@
 #pragma once
-#include "vector2.hpp"
+#include <vector>
+#include <iostream>
 #include "Plantation.hpp"
 #include "Obstacle.hpp"
 
@@ -12,7 +13,7 @@ protected:
     // Pour les plantations il faudrait savoir l'état de la plantation pour savoir quel robot utiliser
     std::vector<Obstacle> m_list_obstacles;
     //liste de plantations
-    vector2<Plantation> m_list_plantations;
+    std::vector<Plantation> m_list_plantations;
 
 
 public:

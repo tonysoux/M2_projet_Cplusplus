@@ -2,9 +2,7 @@
 // Created by tonys on 28/11/2024.
 //
 
-#ifndef PLANTINGROBOT_H
-#define PLANTINGROBOT_H
-
+#pragma once
 #include "Robot.hpp"
 
 
@@ -23,11 +21,9 @@ public:
 protected:
     double m_seed_capacity{0.5};
     // position de la zone de recharge de graines
-    std::vector<Vector2> m_seed_zones;
 
 };
 
 
 
 
-#endif //PLANTINGROBOT_H
