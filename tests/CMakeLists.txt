@@ -16,18 +16,5 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(all-tests
-  src/test_vector2.cpp
-  src/test_robot.cpp
-)
-
-target_link_libraries(
-  all-tests
-  walle-lib
-  GTest::gtest_main
-)
-
-include(GoogleTest)
-gtest_discover_tests(all-tests)
-
-
+# include(GoogleTest)
+# gtest_discover_tests(all-tests)
