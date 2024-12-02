@@ -29,3 +29,15 @@ install(
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 add_subdirectory(tests)
+
+add_executable(all-tests
+  tests/src/test_vector2.cpp
+  tests/src/test_robot.cpp
+)
+
+target_link_libraries(
+  all-tests
+  walle-lib
+  GTest::gtest_main
+)
+
