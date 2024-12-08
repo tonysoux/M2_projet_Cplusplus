@@ -1,25 +1,26 @@
 #pragma once 
 #include <cmath>
 #include <string>
-#include "Environment.hpp"
 
-<<<<<<< HEAD
-=======
-#include "environnement.hpp"
+
+
+#include "Element.hpp"
+
+class Environment;
 
 /// Décrire un objet.
->>>>>>> upstream/main
-class Robot
+class Robot 
 {
 /// tout le monde peut utiliser (même l'extérieur
 public:
-    Robot(Environment* e) : environment(e) {};
+    Robot(Environment* e) : environment(e) {}
 
     void set_speed(double linear_speed);              ///
     void set_angular_speed(double angular_speed);    ///
 
     double get_speed();
     double get_angular_speed();
+    
 
     void stop();
 
@@ -31,7 +32,7 @@ public:
     void run(double dt);
 
     /// retourne la capacity de la batterie.
-    virtual double get_battery_capacity() = 0;
+    double get_battery_capacity() { return m_battery_capacity; }
 
 /// moi et mes enfants on peut y accéder
 private:
@@ -41,7 +42,7 @@ private:
 
     double m_speed{0};/// vitesse linéaire
     double m_omega{0};  /// vitesse angulaire
-
+    double m_battery_capacity{0.5}; /// capacité de la batterie
 protected:
     Environment* environment {nullptr}; //pointeur
 };

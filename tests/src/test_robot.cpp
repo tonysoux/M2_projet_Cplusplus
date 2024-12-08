@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <walle-lib/robot.hpp>
+#include <walle-lib/environnement.hpp>
 
 class MonRobotDeTest : public Robot
 {
@@ -10,7 +11,7 @@ public:
 
 // Validates the behavior of the constructors
 TEST(Robot, test_set_speed) {
-    Environment e;
+    Environment e(-100, 100, -100, 100);
     MonRobotDeTest mon_robot{&e};
 
     mon_robot.set_speed(0.5);
@@ -21,7 +22,7 @@ TEST(Robot, test_set_speed) {
 }
 
 TEST(Robot, test_angular_speed) {
-    Environment e;
+    Environment e(-100, 100, -100, 100);
     MonRobotDeTest mon_robot{&e};
 
     mon_robot.set_angular_speed(0.5);
@@ -32,7 +33,7 @@ TEST(Robot, test_angular_speed) {
 }
 
 TEST(Robot, test_move_forward) {
-    Environment e;
+    Environment e(-100, 100, -100, 100);
     MonRobotDeTest mon_robot{&e};
     float x0 = mon_robot.get_position_x();
     float y0 = mon_robot.get_position_y();

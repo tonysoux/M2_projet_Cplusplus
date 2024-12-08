@@ -1,13 +1,11 @@
-//
-// Created by tonys on 28/11/2024.
-//
 
-#ifndef PLANTATION_HPP
-#define PLANTATION_HPP
+#pragma once
 #include "vector2.hpp"
 #include <iostream>
+#include "Element.hpp"
 
-class Plantation {
+class Plantation : public Element
+{
 protected:
     std::string m_state;
     double m_position_x;
@@ -22,4 +20,4 @@ public:
 
 
 
-#endif //PLANTATION_HPP
+

@@ -1,6 +1,7 @@
 
-#include "robot.hpp"
 
+#include "robot.hpp"
+#include "environnement.hpp"
 double Robot::get_speed()
 {
     return m_speed;
@@ -13,12 +14,12 @@ void Robot::set_speed(double speed)
 
 void Robot::set_angular_speed(double vitesse_angulaire)
 {
-
+    m_omega = vitesse_angulaire;
 }
 
 double Robot::get_angular_speed()
 {
-
+    return m_omega;
 }
 
 void Robot::stop()
