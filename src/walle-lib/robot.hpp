@@ -31,6 +31,9 @@ public:
     /// de la vitesse (et vitesse_angulaire) et de dt
     void run(double dt);
 
+    // fonction pour le déplacement du robot à une position donnée
+    void move_to(double x, double y, double dt);
+
     /// retourne la capacity de la batterie.
     double get_battery_capacity() { return m_battery_capacity; }
 
