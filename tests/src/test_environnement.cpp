@@ -63,3 +63,20 @@ TEST(Environment, remove_element){
     e.remove_element("element 1");
     EXPECT_EQ(e.get_nbre_elements(), 0);
 }
+
+TEST(Environment, remove_robot){
+    Environment e{100,-100,-100,100};
+    e.add_robot("Robot 1", new Robot(&e));
+    e.remove_robot("Robot 1");
+    EXPECT_EQ(e.get_nbre_robots(), 0);
+}
+
+TEST(Environment, filter_by_type){
+    Environment e{100,-100,-100,100};
+    e.add_element("Plantation 1", new Plantation(10,10,0));
+    e.add_element("Plantation 2", new Plantation(20,20,0));
+    e.add_element("Obstacle 1", new Element(30,30,"obstacle", 10));
+    e.add_element("Obstacle 2", new Element(40,40,"obstacle", 10));
+    auto result = e.filter_by_type<Plantation>();
+    EXPECT_EQ(result.size(), 2);
+}

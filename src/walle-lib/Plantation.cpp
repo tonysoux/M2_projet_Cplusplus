@@ -4,7 +4,7 @@
 
 #include "Plantation.hpp"
 
-void Plantation::set_state(std::string state)
+void Plantation::set_state(int state)
 {
     m_state = state;
 }
@@ -19,7 +19,7 @@ double Plantation::get_position_y()
     return m_position_y;
 }
 
-std::string Plantation::get_state()
+int Plantation::get_state()
 {
     return m_state;
 }

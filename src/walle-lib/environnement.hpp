@@ -35,7 +35,20 @@ public:
     Robot* get_robot(std::string name);
     void remove_element(std::string name);
     void remove_robot(std::string name);
+    // fonction pour filtrer les éléments
+    template <typename T>
+    std::map<std::string, T*> filter_by_type() {
+        static_assert(std::is_base_of<Element, T>::value, 
+                    "T must inherit from Element");
+        std::map<std::string, T*> result;
 
+        for (auto& [name, element] : elements) {
+            T* casted = dynamic_cast<T*>(element);
+            if (casted) {
+                result[name] = casted;
+            }
+        }
 
-
+        return result;
+    }
 };
